@@ -30,6 +30,7 @@ class mssql::params {
   $rssvcpassword  = 'Sql!Rs#2008demo'
   $sqlsvcaccount  = 'SQLSVC'
   $sqlsvcpassword = 'Sql!#2008demo'
+  $sapwd          = 'P@ssword!'
   $instancedir    = 'C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Binn\sqlservr.exe'
   $ascollation    = 'Latin1_General_CI_AS'
   $sqlcollation   = 'SQL_Latin1_General_CP1_CI_AS'

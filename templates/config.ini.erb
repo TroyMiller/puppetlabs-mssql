@@ -33,7 +33,7 @@ X86="False"
 
 ; Detailed help for command line argument ENU has not been defined yet.
 
-ENU="True"
+;ENU="True"
 
 ; Specify if errors can be reported to Microsoft to improve future SQL Server releases. Specify 1 or True to enable and 0 or False to disable this feature.
 
@@ -60,9 +60,6 @@ INSTANCENAME="<%= @instancename %>"
 AGTSVCACCOUNT="<%= @agtsvcaccount %>"
 <% end -%>
 
-<% if @agtsvcpassword -%>
-AGTSVCPASSWORD="<%= @agtsvcpassword %>"
-<% end -%>
 
 ; Auto-start service after installation.
 
@@ -95,9 +92,6 @@ ASCONFIGDIR="Config"
 <% if @assvcaccount -%>
 ASSVCACCOUNT="<%= @assvcaccount %>"
 <% end -%>
-<%if @assvcpassword -%>
-ASSVCPASSWORD="<%= @assvcpassword %>"
-<% end -%>
 
 ; Controls the service startup type setting after the service has been created.
 
@@ -120,7 +114,6 @@ ASSYSADMINACCOUNTS="<%= @admin %>"
 
 ; A port number used to connect to the SharePoint Central Administration web application.
 
-FARMADMINPORT="0"
 
 ; Startup type for the SQL Server service.
 
@@ -151,9 +144,6 @@ SQLCOLLATION="<%= @sqlcollation %>"
 <% if @sqlsvcaccount -%>
 SQLSVCACCOUNT="<%= @sqlsvcaccount %>"
 <% end -%>
-<% if @sqlsvcpassword -%>
-SQLSVCPASSWORD="<%= @sqlsvcpassword %>"
-<% end -%>
 
 ; Windows account(s) to provision as SQL Server system administrators.
 <% if @admin -%>
@@ -182,9 +172,6 @@ BROWSERSVCSTARTUPTYPE="Automatic"
 <% if @rssvcaccount -%>
 RSSVCACCOUNT="<%= @rssvcaccount %>
 <% end -%>
-<% if @rssvcpassword -%>
-RSSVCPASSWORD="<%= @rssvcpassword %>
-<% end -%>
 
 ; Specifies how the startup mode of the report server NT service.  When
 ; Manual - Service startup is manual mode (default).
@@ -201,3 +188,18 @@ RSINSTALLMODE="FilesOnlyMode"
 ; Add description of input argument FTSVCACCOUNT
 
 FTSVCACCOUNT="NT AUTHORITY\LOCAL SERVICE"
+
+; The default is Windows Authentication. Use "SQL" for Mixed Mode Authentication.
+SECURITYMODE="SQL"
+
+; The Database Engine root data directory.
+INSTALLSQLDATADIR="C:\MSSQLServer"
+
+; Default directory for the Database Engine user databases.
+SQLUSERDBDIR="E:\SQL_DATA"
+
+; Default directory for the Database Engine user database logs.
+SQLUSERDBLOGDIR="E:\SQL_DATA"
+
+; Directory for Database Engine TempDB files.
+SQLTEMPDBDIR="D:\SQL_TEMPDB"
